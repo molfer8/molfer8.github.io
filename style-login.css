@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+body.dark-mode-use {
+    background-color: #333;
+    color: #FFF;
+}
+
+header{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+}
+
+header h1 {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dark-mode{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dark-mode ion-icon{
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.sun-icon {
+    display: inline;
+}
+
+.moon-icon {
+    display: none;
+}
+
+body.dark-mode-use .sun-icon {
+    display: none;
+}
+
+body.dark-mode-use .moon-icon {
+    display: inline;
+}
+
+body.dark-mode-use .social-networks ion-icon {
+    border: 1px solid #fff;
+}
+
+body.dark-mode-use .container-input {
+    background-color: #666;
+}
+
+body.dark-mode-use .container-form a {
+    color: white;
+}
+
+body.dark-mode-use .button {
+    background-color: #555;
+}
+
+body.dark-mode-use .container-welcome {
+    background-color: #2a7a6a;
+}
+
+body.dark-mode-use .container.toggle .container-welcome {
+    background-color: #2a7a6a;
+}
+
+body.dark-mode-use .container {
+    background-color: #444;
+}
+
+body.dark-mode-use .container-input input::placeholder {
+    color: #FFF;
+}
+
+body, .container {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+body.dark-mode-use .container-input input::placeholder {
+    transition: color 0.5s ease;
+}
+
+#dark-mode ion-icon {
+    transition: opacity 0.5s ease;
+}
+
+#dark-mode ion-icon.hidden {
+    opacity: 0;
+}
+
+#dark-mode ion-icon:not(.hidden) {
+    opacity: 1;
+}
+
+
+.container{
+    width: 800px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.container-form{ 
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+
+.container-form h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.social-networks{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-networks ion-icon{
+    border: 1px solid #c9cccb;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.container-form span{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.container-input{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding:  0 15px;
+    background-color: #eeeeee;
+}
+
+.container-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.container-form a{
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.button{
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color:rgb(255, 127, 80);
+    color: white;
+}
+
+.sign-up{
+    transform: translateX(-100%);
+}
+
+.container.toggle .sign-in{
+    transform: translateX(100%);
+}
+
+.container.toggle .sign-up{
+    transform: translateX(0);
+}
+
+.container-welcome{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #3ab397;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+    border-radius: 60% 0 0 60%;
+}
+
+.container.toggle .container-welcome{
+    transform: translateX(0);
+    border-radius: 0 60% 60% 0;
+    background-color:  #3aa8ad;
+}
+
+.container-welcome .welcome{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.welcome-sign-in{
+    transform: translateX(100%);
+}
+
+.container-welcome h3{
+    font-size: 40px;
+}
+
+.container-welcome p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.container-welcome .button{
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.container.toggle .welcome-sign-in{
+    transform: translateX(0);
+}
+
+.container.toggle .welcome-sign-up{
+    transform: translateX(-100%);
+}
+
+

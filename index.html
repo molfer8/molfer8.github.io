@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastNotes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/libro (1).ico" type="image/x-icon">
+</head>
+<body>
+
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+    
+    <div class="barra-lateral">
+
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="book" name="book-outline"></ion-icon>
+                <span>FastNotes</span>
+            </div>
+            <button class="boton" id="btn-abrir-modal">
+                <ion-icon name="add-outline"></ion-icon>
+                <span>Añadir Tarea</span>
+            </button>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a href="task-completed/task.html">
+                        <ion-icon name="document-attach-outline"></ion-icon>
+                        <span>Tareas Realizadas</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="auth/login.html">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <span>Cuenta</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact/main.html ">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div>
+            <div class="linea"></div>
+
+        <div class="modo-oscuro">
+            <div class="info">
+                <ion-icon name="moon-outline"></ion-icon>
+                <span>Dark Mode</span>
+            </div>
+
+            <div class="switch">
+                <div class="base">
+                    <div class="circulo">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="usuario">
+            <img src="https://pbs.twimg.com/media/EtahhN6XcAM7msK?format=jpg&name=240x240" alt="imagen">
+            <div class="info-usuario">
+                <div class="nombre-email">
+                    <span class="nombre">Sergio Molina</span>
+                    <span class="email">ser@gmail.com</span>
+                </div>
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+
+    <main id="tareas-contenedor">
+
+        <div class="bienvenida">
+            <h2>Bienvenido a FASTNOTES</h2>
+
+            <strong>📝 Organiza tus tareas:</strong> Añade y gestiona tus pendientes de forma sencilla. <br>
+
+            <strong>🌙 Modo oscuro:</strong> Activa o desactiva según tu preferencia para cuidar tus ojos. <br>
+
+            <strong>🧭 Navegación fácil:</strong> Accede rápidamente a todas las secciones desde la barra lateral. <br>
+
+            <strong>🚀 Optimizada y responsiva:</strong> Diseñada para funcionar bien en cualquier dispositivo. <br>
+
+        </div>
+
+        <div class="almacen-tarea">
+            
+        </div>
+
+        <dialog id="modal">
+
+            <form class="task-add" action="/submit-task" method="POST" id="miformulario">
+    
+                <label for="titulo">Título de la tarea:</label>
+                <input type="text" id="titulo" name="titulo" required placeholder="Escribe el título de la tarea">
+                
+                
+                <label for="descripcion">Descripción breve:</label>
+                <textarea id="descripcion" name="descripcion" rows="3" cols="40" required placeholder="Escribe una breve descripción"></textarea>
+                
+                
+                <label for="materia">Materia:</label>
+                <input type="text" id="materia" name="materia" required placeholder="Escribe la materia">
+                
+                
+                <label for="prioridad">Prioridad:</label>
+                <select id="prioridad" name="prioridad" required>
+                    <option value="">Selecciona la prioridad</option>
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+                
+                
+                <label for="fecha">Fecha límite:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                
+                <button type="submit" class="enviar" id="btn-cerrar-modal">Agregar</button>
+            </form>              
+        </dialog>
+    </main>
+
+
+    <script  type =  "module" src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js "></script> 
+    <script  nomodule  src= "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

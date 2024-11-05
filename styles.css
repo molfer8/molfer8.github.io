@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige; 
+    margin: 0;
+    padding: 9;
+}
+
+
+header {
+    margin-top: 5px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+form{
+    width: 500px;
+    padding: 20px;
+}
+
+#homepage {
+    text-decoration: none;
+    color: #000; 
+    font-size: 17px;
+}
+
+#contact{
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #FFFFFF; 
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+h2 {
+    text-align: center;
+    color: #333; 
+    margin: 5px;
+    margin-right: 0;    
+}
+
+.enfatizar{
+    margin-top: 15px;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    margin-right: 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #D8CBB3 ;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 0;
+}
+
+button {
+    margin-top: 15px;
+    margin-left: 130px ;
+    margin-right: 0;
+    background-color: #D8CBB3; 
+    color: black; 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 499;
+}
+
+button:hover {
+    background-color: #F2E5B6; 
+}
+
+.codigo{
+    width: 210px;
+}
+
+
+img{
+    width: 200px;
+}
